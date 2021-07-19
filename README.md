@@ -37,3 +37,22 @@ O projeto já contém um arquivo `launch.json` com as configurações de debug p
 Os arquivos de tradução do projeto se encontram no diretório `locales/`. Eles podem ser editados à mão, com a ajunda do `npm run lintfix` para consertar erros.
 
 Para uma experiência mais "sofisticada, este editor pode ser usado: https://github.com/jcbvm/i18n-editor. Basta usar a função "Import project" e escolher o diretório `locales/`.
+
+
+### Frontend
+
+Requisitos:
+
+* [Node.js](https://nodejs.org/)
+
+```sh
+# Todas as operações do frontend devem ser feitas a partir deste diretório
+cd frontend
+
+# Instalar as dependências
+npm install
+# Executar em modo de desenvolvimento
+npm run dev
+```
+
+O frontend responde localmente na porta 3000: http://localhost:3000/. Para mais detalhes sobre o seu funcionamento, leia o [README do diretório frontend](frontend/README.md).
