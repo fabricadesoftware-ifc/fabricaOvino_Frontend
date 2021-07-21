@@ -39,7 +39,7 @@ Os arquivos de tradução do projeto se encontram no diretório `locales/`. Eles
 Para uma experiência mais "sofisticada, este editor pode ser usado: https://github.com/jcbvm/i18n-editor. Basta usar a função "Import project" e escolher o diretório `locales/`.
 
 
-### Frontend
+## Frontend
 
 Requisitos:
 
