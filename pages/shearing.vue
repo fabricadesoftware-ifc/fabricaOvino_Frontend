@@ -4,6 +4,9 @@
     <hero-bar>
       {{ $t('pages.admin.breed.title') }}
       <template v-slot:right>
+        <router-link id="btn-first" to="sheep" class="button">
+          {{ $t('pages.shearing.historic') }}
+        </router-link>
         <router-link to="/" class="button"> Dashboard </router-link>
       </template>
     </hero-bar>
@@ -29,4 +32,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+#btn-first {
+  margin-right: 0.5rem;
+}
+</style>
