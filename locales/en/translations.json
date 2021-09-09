@@ -305,6 +305,9 @@
         }
       }
     },
+    "shearing": {
+      "historic": "Historic"
+    },
     "sheeps": {
       "add": "Add new sheep",
       "edit": {

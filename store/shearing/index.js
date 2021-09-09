@@ -10,7 +10,7 @@ export const mutations = {
 
 export const actions = {
   async getShearing({ commit }) {
-    const shearing = await this.$axios.$get('/api/v1/shearing')
+    const shearing = await this.$axios.$get('/api/v1/shearing-earring-number')
     commit('loadShearing', shearing)
   }
 }

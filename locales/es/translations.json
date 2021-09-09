@@ -304,6 +304,9 @@
         }
       }
     },
+    "shearing": {
+      "historic": "Histórico"
+    },
     "sheeps": {
       "add": "Agregar nuevo animal",
       "edit": {
