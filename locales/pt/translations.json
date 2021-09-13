@@ -216,7 +216,11 @@
             "label": "Data e Hora da tosquia",
             "placeholder": "Selecione a Data e Hora da tosquia"
           },
-          "amountOfWool": "Quantidade de lã"
+          "amountOfWool": "Quantidade de lã",
+          "date": {
+            "label": "Data da tosquia",
+            "placeholder": "Selecione a Data da tosquia"
+        }
         },
         "tabs": {
           "main": "Tosquias"

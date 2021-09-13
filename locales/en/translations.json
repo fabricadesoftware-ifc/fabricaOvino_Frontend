@@ -216,6 +216,10 @@
             "label": "Date and Time of shearing",
             "placeholder": "Select Date and Time of shearing"
           },
+          "date": {
+            "label": "Date of creation",
+            "placeholder": "Select a creation date"
+          },
           "amountOfWool": "Amount of wool"
         },
         "tabs": {
