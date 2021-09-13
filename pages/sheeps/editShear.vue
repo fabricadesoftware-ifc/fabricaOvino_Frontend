@@ -38,12 +38,12 @@
             ></b-numberinput>
           </b-field>
 
-          <b-field :label="$t('pages.admin.shearing.forms.dateTime.label')">
-            <b-datetimepicker
+          <b-field :label="$t('pages.admin.shearing.forms.date.label')">
+            <b-datepicker
               v-model="date"
               icon="calendar-today"
               :disabled="!edit"
-            ></b-datetimepicker>
+            ></b-datepicker>
           </b-field>
 
           <div v-if="edit">

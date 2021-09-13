@@ -18,8 +18,8 @@
 
 <script>
 import PageTitle from '@/components/templates/PageTitle'
-import BirthInfo from '@/components/sheeps/info/BirthInfo.vue'
-import ShearingInfo from '../../components/sheeps/info/ShearingInfo.vue'
+import BirthInfo from '@/components/sheeps/info/BirthInfo'
+import ShearingInfo from '@/components/sheeps/info/ShearingInfo'
 export default {
   components: { PageTitle, BirthInfo, ShearingInfo },
   asyncData({ params }) {
