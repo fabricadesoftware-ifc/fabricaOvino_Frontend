@@ -215,6 +215,10 @@
             "label": "Fecha y hora de corte",
             "placeholder": "Seleccione la fecha y hora de recorte"
           },
+          "date": {
+            "label": "Fecha de corte",
+            "placeholder": "Seleccione la fecha de recorte"
+          },
           "amountOfWool": "Cantidad de lana"
         },
         "tabs": {

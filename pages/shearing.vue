@@ -13,9 +13,9 @@
         <form-shear />
       </card-component>
       <card-component
+        class="has-table has-mobile-sort-spaced"
         title="Histórico de Tosquias"
         icon="file-document-multiple-outline"
-        class="has-table has-mobile-sort-spaced"
       >
         <list-shearing />
       </card-component>
@@ -23,11 +23,11 @@
   </div>
 </template>
 <script>
-import CardComponent from '@/components/templates/CardComponent.vue'
+import CardComponent from '@/components/templates/CardComponent'
 import HeroBar from '@/components/templates/HeroBar'
-import TitleBar from '@/components/templates/TitleBar.vue'
-import FormShear from '@/components/sheeps/FormShear.vue'
-import ListShearing from '@/components/shearing/ListShearing.vue'
+import TitleBar from '@/components/templates/TitleBar'
+import FormShear from '@/components/sheeps/FormShear'
+import ListShearing from '@/components/shearing/ListShearing'
 
 export default {
   components: { FormShear, TitleBar, HeroBar, CardComponent, ListShearing },

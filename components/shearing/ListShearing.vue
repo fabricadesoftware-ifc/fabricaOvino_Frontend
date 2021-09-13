@@ -21,8 +21,7 @@
         :sortable="column.sortable"
       >
         <span v-if="column.field == 'date'">
-          {{ new Date(props.row[column.field]).toLocaleDateString() }} -
-          {{ new Date(props.row[column.field]).toLocaleTimeString() }}
+          {{ new Date(props.row[column.field]).toLocaleDateString() }}
         </span>
 
         <span v-else>
@@ -50,6 +49,7 @@
 import { mapActions, mapState } from 'vuex'
 
 export default {
+  name: 'ListShearing',
   data() {
     return {
       columns: [
@@ -65,7 +65,7 @@ export default {
         },
         {
           field: 'date',
-          label: 'Data e Hora',
+          label: 'Data',
           sortable: true
         },
         {

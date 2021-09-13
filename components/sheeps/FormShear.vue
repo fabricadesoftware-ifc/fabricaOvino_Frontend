@@ -12,9 +12,9 @@
         </option>
       </b-select>
     </b-field>
-    <v-datetime
+    <v-date
       v-model="date"
-      :label="$t('pages.admin.shearing.forms.dateTime.label')"
+      :label="$t('pages.admin.shearing.forms.date.label')"
     />
 
     <b-field :label="$t('pages.admin.shearing.forms.amountOfWool')" horizontal>
@@ -42,10 +42,10 @@
   </form>
 </template>
 <script>
-import VDatetime from '@/components/templates/VDatetime'
+import VDate from '@/components/templates/VDate'
 import { mapActions, mapState, mapGetters } from 'vuex'
 export default {
-  components: { VDatetime },
+  components: { VDate },
   data() {
     return {
       date: new Date(),
