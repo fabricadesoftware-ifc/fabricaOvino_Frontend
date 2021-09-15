@@ -204,6 +204,9 @@
         "subtitle": "Gestão de ovelhas",
         "table": {
           "id": "Código",
+          "sheep": "N° Brinco",
+          "date": "Data",
+          "amountOfWool": "Quantidade de lã",
           "name": "Nome",
           "actions": "Ações"
         },
