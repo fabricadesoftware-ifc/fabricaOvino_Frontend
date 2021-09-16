@@ -204,6 +204,9 @@
         "subtitle": "Sheep Management",
         "table": {
           "id": "ID",
+          "sheep": "Nº Earring",
+          "date": "Date",
+          "amountOfWool": "Amount of Wool",
           "name": "Name",
           "actions": "Actions"
         },

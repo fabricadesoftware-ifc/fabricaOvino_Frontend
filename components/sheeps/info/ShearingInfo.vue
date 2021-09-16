@@ -140,7 +140,7 @@ export default {
     editShear(shearing) {
       this.$router.push({
         name: `sheeps-editShear___${this.$i18n.locale}`,
-        params: { shearing }
+        params: { shearing, back: 'history', sheep: this.value }
       })
     },
     confirmRemove(shearing) {

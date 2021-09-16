@@ -203,6 +203,9 @@
         "subtitle": "Manejo de ovejas",
         "table": {
           "id": "Código",
+          "sheep": "N° Pendiente",
+          "date": "Fecha",
+          "amountOfWool": "Cantidad de lana",
           "name": "Nombre",
           "actions": "Comparte"
         },

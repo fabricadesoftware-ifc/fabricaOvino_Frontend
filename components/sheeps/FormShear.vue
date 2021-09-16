@@ -69,12 +69,13 @@ export default {
       }
     },
     async save() {
-      this.shearing.date = this.date.toISOString()
+      this.shearing.date = (this.date.getFullYear() + "-" + (this.date.getMonth() + 1) + "-" + (this.date.getDate() + 1))
       this.shearing.user = this.user.id
       try {
         await this.$axios.$post('/api/v1/shearing/', this.shearing)
         this.$toasted.global.defaultSuccess()
         this.getSheeps()
+        this.$root.$emit('reloadGetShearing')
         this.reset()
       } catch (err) {
         for (const item in err.response.data) {
