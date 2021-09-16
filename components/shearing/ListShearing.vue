@@ -87,6 +87,11 @@ export default {
   created() {
     this.getShearing()
   },
+  mounted() {
+    this.$root.$on("reloadGetShearing", () =>{
+      this.getShearing();
+    })
+  },
   methods: {
     ...mapActions('shearing', ['getShearing']),
     editShear(shearing) {

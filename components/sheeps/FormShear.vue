@@ -75,6 +75,7 @@ export default {
         await this.$axios.$post('/api/v1/shearing/', this.shearing)
         this.$toasted.global.defaultSuccess()
         this.getSheeps()
+        this.$root.$emit('reloadGetShearing')
         this.reset()
       } catch (err) {
         for (const item in err.response.data) {
