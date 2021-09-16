@@ -21,9 +21,9 @@
           @click="edit = !edit"
           >{{ $t('buttons.edit') }}</b-button
         >
-        <router-link to="/pt/sheeps/history" class="button">
+        <span class="button" @click="back()">
           Voltar
-        </router-link>
+        </span>
         <hr />
         <div class="form">
           <input id="shearing-id" v-model="shearing" type="hidden" />
@@ -93,6 +93,15 @@ export default {
     }
   },
   methods: {
+    back() {
+      const pBack = this.$route.params.back
+      const url = pBack != undefined ? `sheeps-${pBack}___${this.$i18n.locale}` : `shearing___${this.$i18n.locale}`
+      const pSheep = this.$route.params.sheep != undefined ? this.$route.params.sheep : null
+      this.$router.push({
+        name: url,
+        params: {sheep: pSheep}
+      })
+    },
     reset() {
       this.shearing = {
         id: this.value.id,
