@@ -27,20 +27,20 @@
         <span v-else>
           {{ props.row[column.field] }}
         </span>
+
+        <span v-if="column.field == 'actions'">
+          <b-button 
+            type="is-small is-primary" 
+            icon-left="pencil" 
+            @click="editShear(props.row)"
+          ></b-button>
+          <b-button
+            type="is-small is-danger"
+            icon-left="trash-can-outline"
+            @click="confirmRemove(props.row)"
+          ></b-button>
+        </span>
       </b-table-column>
-      <b-table-colunm
-        custom-key="actions"
-        class="is-actions-cell"
-        label="Ações"
-        @click="editShear(props.row)"
-      >
-        <b-button type="is-small is-primary" icon-left="pencil"></b-button>
-        <b-button
-          type="is-small is-danger"
-          icon-left="trash-can-outline"
-          @click="confirmRemove(props.row)"
-        ></b-button>
-      </b-table-colunm>
     </template>
   </b-table>
 </template>
@@ -55,25 +55,30 @@ export default {
       columns: [
         {
           field: 'id',
-          label: 'Nº Tosquia',
+          label: this.$t('pages.admin.shearing.table.id'),
           sortable: true
         },
         {
           field: 'sheep',
-          label: 'Nº Brinco',
+          label: this.$t('pages.admin.shearing.table.sheep'),
           sortable: true
         },
         {
           field: 'date',
-          label: 'Data',
+          label: this.$t('pages.admin.shearing.table.date'),
           sortable: true
         },
         {
           field: 'amountOfWool',
-          label: 'Quantidade de lã',
+          label: this.$t('pages.admin.shearing.table.amountOfWool'),
           sortable: true
+        },
+        {
+          field: 'actions',
+          label: this.$t('pages.admin.shearing.table.actions'),
+          sortable: false
         }
-      ]
+      ],
     }
   },
   computed: {
@@ -100,6 +105,19 @@ export default {
         hasIcon: true,
         onConfirm: () => this.remove(shearing)
       })
+    },
+    async remove(shearing) {
+      const id = shearing.id
+      const url = `api/v1/shearing/${id}`
+      try {
+        await this.$axios.delete(url)
+        this.$toasted.global.defaultSuccess()
+        this.getShearing()
+      } catch (err) {
+        for (const item in err.response.data) {
+          this.$toast.error(item + ': ' + err.response.data[item])
+        }
+      }
     }
   }
 }
