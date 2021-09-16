@@ -19,27 +19,21 @@
         :label="column.label"
       >
         {{ props.row[column.field] }}
-      </b-table-column>
 
-      <b-table-column
-        custom-key="actions"
-        class="is-actions-cell"
-        :label="$t('pages.admin.breed.table.actions')"
-      >
-        <div class="buttons">
+        <span v-if="column.field == 'actions'">
+          <div class="buttons">
           <b-button
             type="is-small is-primary"
             icon-left="pencil"
             @click="loadBreed(props.row)"
-          >
-          </b-button>
+          ></b-button>
           <b-button
             type="is-small is-danger"
             icon-left="trash-can-outline"
             @click="confirmRemove(props.row)"
-          >
-          </b-button>
+          ></b-button>
         </div>
+        </span>
       </b-table-column>
     </template>
   </b-table>
@@ -60,7 +54,12 @@ export default {
           field: 'name',
           label: this.$t('pages.admin.breed.table.name'),
           sortable: true
-        }
+        },
+        {
+          field: 'actions',
+          label: this.$t('pages.admin.breed.table.actions'),
+          sortable: false
+        },
       ]
     }
   },
