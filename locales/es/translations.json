@@ -134,14 +134,14 @@
       "table": {
         "title": "Agregar ovejas al lote",
         "id": "Código",
-        "description": "Descripción",
+        "name": "Nombre",
         "date": "Fecha y hora",
         "actions": "Comparte"
       },
       "forms": {
         "lot": {
           "label": "Lote",
-          "placeholder": "Ingrese la descripción del lote"
+          "placeholder": "Ingrese el nombre del lote"
         },
         "dateTime": {
           "label": "Fecha y hora creación de lotes",

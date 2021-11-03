@@ -135,14 +135,14 @@
       "table": {
         "title": "Adding Sheep to the Batch",
         "id": "ID",
-        "description": "Description",
+        "name": "Name",
         "date": "Date and Time",
         "actions": "Actions"
       },
       "forms": {
         "lot": {
           "label": "Lot",
-          "placeholder": "Enter the lot description"
+          "placeholder": "Enter batch name"
         },
         "dateTime": {
           "label": "Date and Time of creation",
