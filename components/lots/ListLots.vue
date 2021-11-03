@@ -75,7 +75,7 @@ export default {
           sortable: true
         },
         {
-          field: 'description',
+          field: 'name',
           label: this.$t('pages.lots.table.description'),
           sortable: true
         },
