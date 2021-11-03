@@ -47,7 +47,7 @@ export default {
     loadLots(lots) {
       this.lots = {
         id: lots.id,
-        description: lots.description,
+        name: lots.name,
         date: new Date(lots.date)
       }
     }

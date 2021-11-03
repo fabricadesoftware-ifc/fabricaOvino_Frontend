@@ -135,14 +135,14 @@
       "table": {
         "title": "Adicionando Ovelhas ao Lote",
         "id": "Código",
-        "description": "Descrição",
+        "name": "Nome",
         "date": "Data e Hora",
         "actions": "Ações"
       },
       "forms": {
         "lot": {
           "label": "Lote",
-          "placeholder": "Informe a descrição do lote"
+          "placeholder": "Informe o nome do lote"
         },
         "dateTime": {
           "label": "Data e Hora da criação do lote",

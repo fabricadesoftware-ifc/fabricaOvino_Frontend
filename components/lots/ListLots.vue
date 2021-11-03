@@ -76,7 +76,7 @@ export default {
         },
         {
           field: 'name',
-          label: this.$t('pages.lots.table.description'),
+          label: this.$t('pages.lots.table.name'),
           sortable: true
         },
         {
@@ -116,7 +116,7 @@ export default {
       })
     },
     async remove(lots) {
-      alert('Removendo: ' + lots.description)
+      alert('Removendo: ' + lots.name)
       const id = lots.id
       const url = `/api/v1/lots/${id}`
       try {
