@@ -6,6 +6,9 @@ export const actions = {
       const breeds = await this.$axios.$get('/api/v1/breeds')
       commit('breeds/loadBreeds', breeds)
 
+      const feeds = await this.$axios.$get('/api/v1/feeds')
+      commit('feeds/loadFeeds', feeds)
+
       const categories = await this.$axios.$get('/api/v1/categories')
       commit('categories/loadCategories', categories)
 

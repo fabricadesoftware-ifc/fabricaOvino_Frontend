@@ -302,6 +302,10 @@
         "email": {
           "label": "E-mail",
           "placeholder": "Informe o e-mail"
+        },
+        "description": {
+          "label": "Descrição",
+          "placeholder": "Informe a descrição"
         }
       }
     },

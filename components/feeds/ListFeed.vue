@@ -18,7 +18,7 @@
         <b-button
           type="is-small is-primary"
           icon-left="pencil"
-          @click="loadFeeds(props.row)"
+          @click="loadFeed(props.row)"
         ></b-button>
         <b-button
           type="is-small is-danger"
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
 export default {
   data() {
     return {
@@ -50,18 +51,20 @@ export default {
           label: 'Descrição',
           sortable: true
         }
-      ],
-      feeds: []
+      ]
     }
   },
+  computed: {
+    ...mapState('feeds', ['feeds'])
+  },
   created() {
-    this.carregarFeed()
+    this.getFeeds()
   },
   methods: {
-    async carregarFeed() {
-      this.feeds = await this.$axios.$get('/api/v1/feeds')
+    ...mapActions('feeds', ['getFeeds']),
+    loadFeed(feed) {
+      this.$emit('loadFeed', feed)
     },
-    loadFeeds() {},
     confirmRemove(feed) {
       this.$buefy.dialog.confirm({
         title: 'Excluir ração?',
@@ -79,7 +82,7 @@ export default {
       try {
         await this.$axios.$delete(url)
         this.$toasted.global.defaultSuccess()
-        this.carregarFeed()
+        this.getFeeds()
       } catch (err) {
         this.toast.error(err.response.data)
       }
