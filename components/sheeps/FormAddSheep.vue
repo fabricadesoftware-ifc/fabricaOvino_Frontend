@@ -1,5 +1,5 @@
 <template>
-  <form action="">
+  <form @submit.prevent="submit">
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title">Novo Aninal</p>
@@ -111,9 +111,9 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-// import RadioPicker from '@/components/templates/RadioPicker'
+import RadioPicker from '@/components/templates/RadioPicker'
 export default {
-  // components: {RadioPicker},
+  components: {RadioPicker},
   data() {
     return {
       birthday: new Date(),
@@ -128,7 +128,7 @@ export default {
   },
   methods: {
     ...mapActions('sheeps', ['getSheeps']),
-    async save() {
+    async submit() {
       this.sheep.birthday = this.birthday.toLocaleDateString('fr-CA')
       const url = `/api/v1/sheeps/`
 
